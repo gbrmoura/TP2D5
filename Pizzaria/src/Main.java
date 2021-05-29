@@ -40,12 +40,14 @@ public class Main {
                     .setIngredientes(FactoryIngredient.Build(TypeIngredient.Onion)
                         .setAmaount(10))
                     .setIngredientes(FactoryIngredient.Build(TypeIngredient.Tomato)
-                        .setAmaount(12)))
+                        .setAmaount(12))
+                    .setValue(37.50))
                 .setItem(FactoryPizza.Build(TypePizza.Portuguese)
                     .setIngredientes(FactoryIngredient.Build(TypeIngredient.Tomato)
                         .setAmaount(5))
                     .setIngredientes(FactoryIngredient.Build(TypeIngredient.Onion)
-                        .setAmaount(2)));
+                        .setAmaount(2))
+                    .setValue(50.90));
 
         dayOne.setOrders(firstOrder);
 
@@ -58,6 +60,10 @@ public class Main {
             System.out.println("Day of Order : " + order.getDate());
             System.out.println("Client : " + order.getClient().getFullName());
             System.out.println("With Addres : " + order.getClient().getAddress().getAddress());
+            System.out.println("----------------------------------------------------\n");
+            
+            System.out.println("----------------------------------------------------");
+            System.out.println("Value Total : " + order.getTotalValue());
             System.out.println("----------------------------------------------------\n");
         }
     }   
