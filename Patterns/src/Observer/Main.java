@@ -5,8 +5,6 @@
  */
 package Observer;
 
-import java.util.Observable;
-
 /**
  *
  * @author Gabriel
@@ -14,6 +12,13 @@ import java.util.Observable;
 public class Main {
     
     public static void main(String[] args){
+        
+       IObservable obs =  new Manager();
+       
+       IObserver user = new User(obs);
+       
+       obs.addObserver(user);
+       obs.notifyObserver();
         
     }
     
